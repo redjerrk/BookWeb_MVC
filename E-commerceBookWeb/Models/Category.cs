@@ -9,9 +9,11 @@ namespace E_commerceBookWeb.Models
         public int Id { get; set; }
         
         [Required]
+        [MaxLength(30)]
         [DisplayName("Category Name")]
         public required string Name { get; set; }
         [DisplayName("Category Order")]
+        [Range(1, 100)]
         public int DisplayOrder { get; set; }
         
 
