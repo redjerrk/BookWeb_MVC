@@ -33,6 +33,7 @@ namespace E_commerceBookWeb.Controllers
             {
                 _db.Categories.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Category Added Successfully";
                 return RedirectToAction("Index");
             }
 
@@ -62,6 +63,7 @@ namespace E_commerceBookWeb.Controllers
             {
                 _db.Categories.Update(obj);
                 _db.SaveChanges();
+                TempData["update"] = "Category Updated Successfully";
                 return RedirectToAction("Index");
             }
 
@@ -94,6 +96,7 @@ namespace E_commerceBookWeb.Controllers
             }
             _db.Categories.Remove(obj);
             _db.SaveChanges();
+            TempData["delete"] = "Category Deleted Successfully";
             return RedirectToAction("Index");
 
             

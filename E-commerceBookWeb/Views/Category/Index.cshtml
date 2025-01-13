@@ -1,7 +1,9 @@
 ﻿@model List<Category>
+<partial name="_Notification"/>
 
 <div class="container">
     
+
     <div class="row pt-4 pb-4">
         <div class="col-6">
             <h1>Category List</h1>
@@ -10,24 +12,24 @@
             <a asp-controller="Category" asp-action="Create" class="btn btn-primary"><i class="bi bi-plus-circle"></i> Create New Category</a>
         </div>
     </div>
-    
-    
 
-    
+
+
+
     <div class="">
-        <table class="table table-bordered table-striped text-center">
+        <table class="table table-bordered table-striped text-center align-content-center">
             <thead>
             <tr>
                 <th>
                     Category Name
                 </th>
                 <th>
-                    Display Order 
+                    Display Order
                 </th>
                 <th>
                     Modify
                 </th>
-                
+
 
             </tr>
             </thead>
@@ -39,11 +41,11 @@
                     <td>@obj.Name</td>
                     <td>@obj.DisplayOrder </td>
                     <td>
-                        <div class="w-30 btn-group" role ="group">
-                                <a asp-controller="Category" asp-action="Edit" class="btn btn-outline-success mx-2" asp-route-id="@obj.Id"> <i class="bi bi-pencil-square"></i> Edit</a>
-                            <a asp-controller="Category" asp-action="Delete" class="btn btn-danger mx-2" asp-route-id="@obj.Id" > <i class="bi bi-trash"></i> Delete</a>
-                            </div>
-                            
+                        <div class="w-30 btn-group " role="group">
+                            <a asp-controller="Category" asp-action="Edit" class="btn btn-outline-success mx-2" asp-route-id="@obj.Id"> <i class="bi bi-pencil-square"></i> Edit</a>
+                            <a asp-controller="Category" asp-action="Delete" class="btn btn-danger mx-2" asp-route-id="@obj.Id"> <i class="bi bi-trash"></i> Delete</a>
+                        </div>
+
                     </td>
                 </tr>
 
