@@ -1,16 +1,16 @@
-﻿using E_commerceBookWeb.Models;
+﻿using BookWebRazor.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace E_commerceBookWeb.Data
+namespace BookWebRazor.Data
 {
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            
+
         }
 
-        public DbSet<Category> Categories{ get; set; }
+        public DbSet<Category> Categories { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>().HasData(
@@ -22,4 +22,5 @@ namespace E_commerceBookWeb.Data
 
         }
     }
+
 }
