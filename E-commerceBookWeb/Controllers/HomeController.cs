@@ -1,8 +1,8 @@
 using System.Diagnostics;
-using E_commerceBookWeb.Models;
+using BookWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace E_commerceBookWeb.Controllers
+namespace BookWeb.Controllers
 {
     public class HomeController : Controller
     {

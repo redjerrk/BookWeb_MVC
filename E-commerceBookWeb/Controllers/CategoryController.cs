@@ -1,13 +1,19 @@
-﻿using E_commerceBookWeb.Data;
-using E_commerceBookWeb.Models;
+﻿using BookWeb.DataAccess.Data;
+using BookWeb.Models;
+
 using Microsoft.AspNetCore.Mvc;
 
-namespace E_commerceBookWeb.Controllers
+namespace BookWeb.Controllers
 {
-    public class CategoryController(ApplicationDbContext db) : Controller
+    public class CategoryController : Controller
     {
 
-        private readonly ApplicationDbContext _db = db;
+        private readonly ApplicationDbContext _db;
+
+        public CategoryController(ApplicationDbContext db)
+        {
+            _db = db;
+        }
 
         public IActionResult Index()
         {
@@ -58,7 +64,7 @@ namespace E_commerceBookWeb.Controllers
         [HttpPost]
         public IActionResult Edit(Category obj)
         {
-            
+
             if (ModelState.IsValid)
             {
                 _db.Categories.Update(obj);
@@ -89,7 +95,7 @@ namespace E_commerceBookWeb.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeletePOST(int? id)
         {
-            Category? obj = _db.Categories.Find( id);
+            Category? obj = _db.Categories.Find(id);
             if (obj == null)
             {
                 return NotFound();
@@ -99,7 +105,7 @@ namespace E_commerceBookWeb.Controllers
             TempData["delete"] = "Category Deleted Successfully";
             return RedirectToAction("Index");
 
-            
+
 
         }
 
