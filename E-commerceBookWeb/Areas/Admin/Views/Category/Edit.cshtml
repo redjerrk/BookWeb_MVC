@@ -1,4 +1,5 @@
-﻿@model Category
+﻿
+@model Category
 
 
 
@@ -6,7 +7,7 @@
     <div class="card-header bg-secondary bg-gradient ml-0 py-0">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="text-white py-2">Delete Category</h2>
+                <h2 class="text-white py-2">Edit Category</h2>
             </div>
 
         </div>
@@ -21,19 +22,19 @@
             </div>
             <div class="mb-3 row p-1 col-6">
                 <label asp-for="Name" class="p-0"></label>
-                <input asp-for="Name" class="form-control" disabled />
+                <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="mb-3 row p-1 col-6">
                 <label asp-for="DisplayOrder" class="p-0"></label>
-                <input asp-for="DisplayOrder" class="form-control" disabled />
+                <input asp-for="DisplayOrder" class="form-control" />
                 <span asp-validation-for="DisplayOrder" class="text-danger"></span>
             </div>
 
 
             <div class="row ">
                 <div class="col-6 col-md-3">
-                    <button type="submit" class="btn btn-danger form-control">Delete</button>
+                    <button type="submit" class="btn btn-success form-control">Update</button>
                 </div>
                 <div class="col-6 col-md-3">
                     <a asp-controller="Category" asp-action="Index" class="btn btn-secondary border form-control">Back to List</a>
