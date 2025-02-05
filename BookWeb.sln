@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookWeb.Utility", "BookWeb.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookWeb.DataAccess", "BookWeb.DataAccess\BookWeb.DataAccess.csproj", "{EB398278-14BE-4E95-A652-373B5829578E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookWeb.Web", "E-commerceBookWeb\BookWeb.Web.csproj", "{1F53420F-55FB-48A5-9DF4-73442BEF21A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookWeb.Web", "BookWeb.Web\BookWeb.Web.csproj", "{473ADCD6-2F01-4503-96E3-051B6D65EA17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{EB398278-14BE-4E95-A652-373B5829578E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB398278-14BE-4E95-A652-373B5829578E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB398278-14BE-4E95-A652-373B5829578E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1F53420F-55FB-48A5-9DF4-73442BEF21A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F53420F-55FB-48A5-9DF4-73442BEF21A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F53420F-55FB-48A5-9DF4-73442BEF21A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1F53420F-55FB-48A5-9DF4-73442BEF21A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{473ADCD6-2F01-4503-96E3-051B6D65EA17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{473ADCD6-2F01-4503-96E3-051B6D65EA17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{473ADCD6-2F01-4503-96E3-051B6D65EA17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{473ADCD6-2F01-4503-96E3-051B6D65EA17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
