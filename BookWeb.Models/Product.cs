@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -26,28 +27,29 @@ namespace BookWeb.Models
 
         [Required]
         [Display(Name = "Last Price")]
-        [Range(1, 1000)]
+        [Range(1, 100000)]
         public double ListPrice { get; set; }
 
         [Required]
         [Display(Name = "Price for 1 - 50")]
-        [Range(1, 1000)]
+        [Range(1, 1000000)]
         public double Price { get; set; }
 
         [Required]
         [Display(Name = "Price for 50 - 99")]
-        [Range(1, 1000)]
+        [Range(1, 100000)]
         public double Price50 { get; set; }
 
         [Required]
         [Display(Name = "Price for 100+")]
-        [Range(1, 1000)]
+        [Range(1, 100000)]
         public double Price100 { get; set; }
 
         public int  CategoryId { get; set; }
         [ForeignKey("CategoryId")]
+        [ValidateNever]
         public Category Category { get; set; }
-
-        public string imageUrl { get; set; }
+        [ValidateNever]
+        public string ImageUrl { get; set; }
     }
 }
