@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace BookWeb.Models
 {
@@ -48,6 +49,7 @@ namespace BookWeb.Models
         public int  CategoryId { get; set; }
         [ForeignKey("CategoryId")]
         [ValidateNever]
+
         public Category Category { get; set; }
         [ValidateNever]
         public string ImageUrl { get; set; }
