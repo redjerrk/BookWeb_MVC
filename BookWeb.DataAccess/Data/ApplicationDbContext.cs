@@ -1,15 +1,11 @@
-﻿using BookWeb.Models;
+﻿
+using BookWeb.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BookWeb.DataAccess.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
@@ -18,14 +14,20 @@ namespace BookWeb.DataAccess.Data
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
+
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Category>().HasData(
-                new Category { Id = 1, Name = "Action", DisplayOrder = 1 },
-                new Category { Id = 2, Name = "SciFi", DisplayOrder = 2 },
-                new Category { Id = 3, Name = "Romantic", DisplayOrder = 3 }
+                  new Category { Id = 1, Name = "Action", DisplayOrder = 1 },
+                  new Category { Id = 2, Name = "SciFi", DisplayOrder = 2 },
+                  new Category { Id = 3, Name = "Romantic", DisplayOrder = 3 }
+
 
             );
+
+
 
             modelBuilder.Entity<Product>().HasData(
                 new Product
